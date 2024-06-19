@@ -1,4 +1,5 @@
 import sys
+import os
 def inputshift():
     shift= None
     while shift == None:
@@ -10,12 +11,12 @@ def inputshift():
          if shift<0 or shift > 25:
               raise ValueError
          if shift==0:
-               sys.exit(0)
+               sys.exit()
          return shift
-        except SystemExit:
-         print("Abbruch bei Shift-input! !")
-         return 0
-        except:
+      #  except SystemExit:
+      #   print("Abbruch bei Shift-input! !")
+      #   return 0
+        except (ValueError,TypeError):
           shift=None
           print("Etwas ist schiefgelaufen. Bitte Bildschirm einschalten oder support anrufen! (Shift-input)")
 
