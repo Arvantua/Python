@@ -14,11 +14,12 @@ def inputshift():
          return shift
         except SystemExit:
          print("Abbruch bei Shift-input! !")
+         return 0
         except:
           shift=None
           print("Etwas ist schiefgelaufen. Bitte Bildschirm einschalten oder support anrufen! (Shift-input)")
 
-def encrypt(x="",y=0):
+def encrypt(x="",y=1):
    encr = ""                                    # wird das Ergebnis
    try:                                         # da wir casten kann immer was schiefgehen
       x=str(x)
