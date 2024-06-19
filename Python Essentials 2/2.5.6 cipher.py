@@ -11,11 +11,12 @@ def inputshift():
          if shift<0 or shift > 25:
               raise ValueError
          if shift==0:
+               print("0: Abbruch! ")
                sys.exit()
          return shift
-      #  except SystemExit:
-      #   print("Abbruch bei Shift-input! !")
-      #   return 0
+       # except SystemExit:
+       #  print("Abbruch bei Shift-input! !")
+       #  return 0
         except (ValueError,TypeError):
           shift=None
           print("Etwas ist schiefgelaufen. Bitte Bildschirm einschalten oder support anrufen! (Shift-input)")
@@ -38,10 +39,9 @@ def encrypt(x="",y=1):
 
         encr += ch                              # fügt verschlüsselte Buchstaben oder unveränderte andere zeichen dem Ergebnis hinzu
    except:
-      try:                                      # keine Ahnung ob das auch schöner geht ¯\_(ツ)_/¯
-        sys.exit()
-      except:
-         print("Fehler ! Abbruch! (encryption)")  
+                                                # keine Ahnung ob das auch schöner geht ¯\_(ツ)_/¯
+        print("Fehler ! Abbruch! (encryption)") 
+        sys.exit() 
    return encr
 
 def inputtext():
